@@ -15,16 +15,15 @@ import {
   StatusBar,
 } from 'react-native';
 import {Header, Colors} from 'react-native/Libraries/NewAppScreen';
-import {RSA} from 'react-native-rsa-native';
+import {publicKey} from './data/key';
+import {encrypt} from './utils/crypto';
 
 const App: () => React$Node = () => {
   const [value, onChangeText] = React.useState('Useless Placeholder');
-  const publicKey =
-    '-----BEGIN RSA PUBLIC KEY-----\nMIICCgKCAgEAumGfPuK3FH6If+8JBh0OoylfLpIdGlRFjgnl6uW8i9w5f7cIeDkN\nq+BQ3Id1kPwXCFh+S3mjVzvwdijgKePkPM8jpNXN2XGgoY4hW6pfcYFlrDd71tLS\nzDG0YducDYsDZ0DT0AuMfbqdoGVSbcvTdmuDnsprOmzUD/haABqNDjKBqOqL7HFL\nhiAtcTWDzck/NBLlweEBaXZHUgAaqAU34EsqfKoWPiJZ4QzDFTNXGfZZ/8+uTNMk\niOxUqRo47pOibNzWB1XvQHRCV+jIkMrhFWBQFYjrfoUE77ZoXco2HC3HGe8hBXQb\nGUZDZYankYe6wGmP2nP2MzFn4kZ+7fwJn3O/iDkuFmlcEFZQIC07MtqYRxVje6Kt\nR37C7SysZReCPaN9svsitzggJTZFDtNxhzcmlkzJTi6AKr3KMFUYVf9Mg8QKMe93\nJp2eLnXH/h9Lxqkm+ohpISUhst4TJXaF5LPCVvwySrF+VNe2TBqWRH6WHVDZOqqx\nnpxrR+VkGqVFS1zlU3WUIIziJyAWUbdrCuoITheRXIz8FOm8hnztkg3HPb7/i8f7\nB4490RW/Ob8HQIf8+98M78V3cvJFqhF54U6wp4T3rcU11X+5FF4vQnlH0k5Eb704\ngNv7AZnuJs2lmBNynSj6JWIBVd9SqqtYKztTEoYcSn9Kvc7pKPifbyMCAwEAAQ==\n-----END RSA PUBLIC KEY-----\n';
 
-  RSA.encrypt(value, publicKey).then(encodedMessage => {
-    console.log(`the encoded message is ${encodedMessage}`);
-  });
+  const enc = encrypt(value, publicKey);
+
+  console.log('encrypted value', enc);
 
   return (
     <>
@@ -35,7 +34,7 @@ const App: () => React$Node = () => {
           style={styles.scrollView}>
           <Header />
           <TextInput
-            style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+            style={{height: 40, borderColor: 'red', borderWidth: 1}}
             onChangeText={text => onChangeText(text)}
             value={value}
           />

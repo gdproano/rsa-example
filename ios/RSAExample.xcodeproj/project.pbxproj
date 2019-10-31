@@ -19,6 +19,8 @@
 		45375E74E338E20A226AACA1 /* libPods-RSAExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE41270752C42E2126168CD9 /* libPods-RSAExampleTests.a */; };
 		844C8573EDE2C4BD1D7A46C6 /* libPods-RSAExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C7A825C727209C6CD6FDF09 /* libPods-RSAExample.a */; };
 		9718686B4C9D63BC80F78515 /* libPods-RSAExample-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB0FB8CD9E9C3DED7EEB829 /* libPods-RSAExample-tvOS.a */; };
+		D0CBCFF723689D1A00F322CC /* libRNRSA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CBCFF623689C3900F322CC /* libRNRSA.a */; };
+		D0CBCFF92368A06B00F322CC /* libReact-jsi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CBCFF82368A06B00F322CC /* libReact-jsi.a */; };
 		E9911769AE5358498B170387 /* libPods-RSAExample-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A2EA946A424770663E21933 /* libPods-RSAExample-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "RSAExample-tvOS";
+		};
+		D0CBCFF523689C3900F322CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0CBCFF123689C3900F322CC /* RNRSA.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BF40FFBD1F05EC4000DC4E95;
+			remoteInfo = RNRSA;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -64,6 +73,8 @@
 		8C7A825C727209C6CD6FDF09 /* libPods-RSAExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSAExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C81CA208FADDD446663CD8B6 /* Pods-RSAExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSAExample.release.xcconfig"; path = "Target Support Files/Pods-RSAExample/Pods-RSAExample.release.xcconfig"; sourceTree = "<group>"; };
 		CE41270752C42E2126168CD9 /* libPods-RSAExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSAExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0CBCFF123689C3900F322CC /* RNRSA.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNRSA.xcodeproj; path = "../node_modules/react-native-rsa-native/ios/RNRSA.xcodeproj"; sourceTree = "<group>"; };
+		D0CBCFF82368A06B00F322CC /* libReact-jsi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-jsi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B4162872795F10744ABCE3 /* Pods-RSAExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSAExample.debug.xcconfig"; path = "Target Support Files/Pods-RSAExample/Pods-RSAExample.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -82,6 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0CBCFF92368A06B00F322CC /* libReact-jsi.a in Frameworks */,
+				D0CBCFF723689D1A00F322CC /* libRNRSA.a in Frameworks */,
 				844C8573EDE2C4BD1D7A46C6 /* libPods-RSAExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +152,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0CBCFF82368A06B00F322CC /* libReact-jsi.a */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				8C7A825C727209C6CD6FDF09 /* libPods-RSAExample.a */,
@@ -161,7 +175,6 @@
 				68B41C2916984189AA6FA1D9 /* Pods-RSAExampleTests.debug.xcconfig */,
 				08AF0F2BED69107406FFB93F /* Pods-RSAExampleTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -175,6 +188,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				D0CBCFF123689C3900F322CC /* RNRSA.xcodeproj */,
 				13B07FAE1A68108700A75B9A /* RSAExample */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* RSAExampleTests */,
@@ -194,6 +208,14 @@
 				00E356EE1AD99517003FC87E /* RSAExampleTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* RSAExample-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* RSAExample-tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0CBCFF223689C3900F322CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0CBCFF623689C3900F322CC /* libRNRSA.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -305,7 +327,7 @@
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "RSAExample" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -314,6 +336,12 @@
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D0CBCFF223689C3900F322CC /* Products */;
+					ProjectRef = D0CBCFF123689C3900F322CC /* RNRSA.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* RSAExample */,
@@ -323,6 +351,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D0CBCFF623689C3900F322CC /* libRNRSA.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNRSA.a;
+			remoteRef = D0CBCFF523689C3900F322CC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
