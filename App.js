@@ -21,7 +21,9 @@ import {encrypt} from './utils/crypto';
 const App: () => React$Node = () => {
   const [value, onChangeText] = React.useState('Useless Placeholder');
 
-  const enc = encrypt(value, publicKey);
+  const values =
+    '{"user":"david","password":"clave","idAffiliation":"NOT_DEVICE_REGISTER"}';
+  const enc = encrypt(values, publicKey);
 
   console.log('encrypted value', enc);
 
